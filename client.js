@@ -14,15 +14,26 @@ const connect = function () {
 
   conn.on('connect', () => {
     //???we're using console.log instead of conn.on because the message is printed to the player????
-    console.log('Successfully connected to game server');    
+    console.log('Successfully connected to game server');
     conn.write('Name: TOK');
+    // conn.write('Move: up');
+    // conn.write('Move: right');
+    // conn.write('Move: down');
+    // setTimeout(() => conn.write('Move: up'), 50);
+    // setTimeout(() => conn.write('Move: up'), 100);
+    //setInterval does not work
+    // setInterval(() => {
+    //   conn.write('Move: up');
+    // }, 50)
   });
 
   return conn;
 };
 
-console.log('Connecting ...');
-connect();
+//the following code shou;dn't be here and
+// caused the game to have 2 snakes and receive each message twice
+// console.log('Connecting ...');
+// connect();
 
 
 module.exports = { connect };
