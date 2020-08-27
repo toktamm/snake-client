@@ -12,6 +12,12 @@ const connect = function () {
     console.log('Server says: ', data);
   });
 
+  conn.on('connect', () => {
+    //???we're using console.log instead of conn.on because the message is printed to the player????
+    console.log('Successfully connected to game server');    
+    conn.write('Name: TOK');
+  });
+
   return conn;
 };
 
@@ -20,3 +26,6 @@ connect();
 
 
 module.exports = { connect };
+
+
+
