@@ -16,6 +16,10 @@ connect();
  * Specifically, so that we can handle user input via stdin
  */
 
-setupInput( );
+setupInput();
 
-
+/*
+doubles the snkae and still WASD doesn't work
+const conn = connect();
+setupInput(conn);
+*/

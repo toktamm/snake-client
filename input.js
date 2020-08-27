@@ -13,22 +13,25 @@ const setupInput = function (conn) {
     if (key === '\u0003') {
       process.exit();
     }
-    // process.stdout.write('.');
+    process.stdout.write('.');
     if (key === 'w') {
-  connection.write('Move: up');
-}
+      connection.write('Move: up');
+    }
 
-if (key === 'a') {
-  connection.write('Move: left');
-}
+    if (key === 'a') {
+      connection.write('Move: left');
+    }
 
-if (key === 's') {
-  connection.write('Move: down');
-}
+    if (key === 's') {
+      connection.write('Move: down');
+    }
 
-if (key === 'd') {
-  connection.write('Move: right');
-}
+    if (key === 'd') {
+      connection.write('Move: right');
+    }
+    if (key === 'v') {
+      connection.write("Say: Here I come!");
+    }
   });
 
   return stdin;
