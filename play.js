@@ -16,6 +16,6 @@ connect();
  * Specifically, so that we can handle user input via stdin
  */
 
-setupInput();
+setupInput( );
 
 
